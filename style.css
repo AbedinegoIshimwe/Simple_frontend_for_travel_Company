@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+
+:root {
+  --primary-color: #FF8C00;
+  --secondary-color: #159307;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo span {
+  background-color: var(--primary-color);
+  color: var(--white);
+  width: 2em;  
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;  
+  margin-right: 0.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-menu li {
+  margin-left: 2rem;
+}
+
+.nav-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/bimage.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(255, 140, 0, 0.6);  /* Reduced opacity from 0.8 to 0.6 */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  backdrop-filter: blur(5px);  /* This adds a slight blur effect to the background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* This adds a subtle shadow for depth */
+}
+
+.hero-content h1, .hero-content p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  /* This adds a text shadow for better readability */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Featured Experiences */
+.featured-experiences {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+.experience-card {
+    width: 30%;
+    text-align: center;
+}
+
+.experience-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.experience-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+}
+
+.experience-card p {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .featured-experiences {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-card {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Testimonial */
+.testimonial {
+  background-color: #f8f8f8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  font-family: 'Merriweather', serif;
+}
+
+.testimonial cite {
+  font-style: normal;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Services Page Styles */
+.services-header {
+  background-image: url('./images/Bservices.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.services-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+  color: var(--primary-color); 
+}
+
+.services-header p {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.services-intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card-content {
+  padding: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+}
+
+.service-card p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* About Us Page Styles */
+.about-header {
+  background-color: #f8f8f8;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Contact Page Styles */
+.contact-header {
+  background-color: #f8f8f8;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background-color: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 0.8rem;
+  font-family: 'Merriweather', serif;
+}
+
+.contact-card p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #333;
+  flex-grow: 1;
+  word-break: break-word;
+}
+
+.contact-card a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+.contact-card a:hover {
+  color: var(--primary-color);
+}
+
+/* Privacy Policy and Terms of Service Styles */
+.privacy-policy, .terms-of-service {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+.privacy-policy h1, .terms-of-service h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+
+.privacy-policy p, .terms-of-service p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.terms-of-service h2 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+}
+
+.terms-of-service ul {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    margin-top: 1rem;
+  }
+
+  .nav-menu li {
+    margin: 0.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .featured-experiences {
+    flex-direction: column;
+  }
+
+  .experience-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .services-header h1, .about-header h1, .contact-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-grid, .about-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-policy h1, .terms-of-service h1 {
+    font-size: 2rem;
+  }
+
+  .terms-of-service h2 {
+    font-size: 1.3rem;
+  }
+}
